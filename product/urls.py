@@ -16,7 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from product.views import ProductsView, LoginView, LogoutView, RegisterUserView, ProfileView, BasketAdd
+
+app_name = 'product'
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('', ProductsView.as_view(), name='store'),
+    path('login/', LoginView.as_view(), name='login'),
+    path('logout/', LogoutView.as_view(), name='logout'),
+    path('register/', RegisterUserView.as_view(), name='register'),
+    path('profile/', ProfileView.as_view(), name='profile'),
+    path('baskets/add/<int:product_id>/', BasketAdd.as_view(), name='basket_add'),
 ]

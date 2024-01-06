@@ -1,0 +1,131 @@
+{% extends 'product/base.html' %}
+{% load static %}
+{% block content %}
+    			<!--//top-header-nav---->
+			<!----content---->
+				<div class="content">
+					<div class="container">
+				<!--- products ---->
+				<div class="products">
+					<div class="product-filter">
+						<h1><a href="#">FILTER</a></h1>
+						<div class="product-filter-grids">
+							<div class="col-md-3 product-filter-grid1-brands">
+								<h3>BRANDS</h3>
+								<ul class="col-md-6 unstyled-list b-list1">
+                                    {% for prod in products %}
+									    <li><a href="{% url 'product:store' %}?brand={{ prod.brand }}">{{ prod.brand }}</a></li>
+                                    {% endfor %}
+								</ul>
+								<div class="clearfix"> </div>
+							</div>
+							<!---->
+							<div class="col-md-6 product-filter-grid1-brands-col2">
+									<div class="producst-cate-grids">
+                                        {% for category in categoryes %}
+                                            <div class="col-md-4 producst-cate-grid text-center">
+                                                <h2>{{ category.title }}</h2>
+                                                <img class="r-img text-center img-responsive" src="{{ category.image.url }}" title="name">
+                                                <h4>TOTAL</h4>
+                                                <label>{{ category.count_product }} PRODUCTS</label>
+                                                <a class="r-list-w" href="{% url 'product:store' %}?category={{ category.id }}">Выбрать</a>
+                                            </div>
+                                        {% endfor %}
+									</div>
+							</div>
+							<!---->
+							<div class="product-filter-grid1-brands-col3">
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+				<!-- //products ---->
+				<!----speical-products---->
+				<div class="special-products all-poroducts">
+					<div class="s-products-head">
+						<div class="s-products-head-left">
+							<h3>SPECIAL <span>PRODUCTS</span></h3>
+						</div>
+						<div class="s-products-head-right">
+							<a href="{% url 'product:store' %}">view all products</a>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<!----special-products-grids---->
+					<div class="special-products-grids">
+                        {% for product in products %}
+                            <div class="col-md-3 special-products-grid text-center">
+                                <a class="brand-name">{{ product.brand }}</a>
+                                <a class="product-here" href=""><img src="{{ product.image.url }}" title="product-name" /></a>
+                                <h4><a href="../../../static/web/single-page.html">{{ product.title }}</a></h4>
+                                <a class="product-btn" href="
+    {% if not user.is_authenticated %}{% url 'index' %}{% else %}{% url 'product:basket_add' product.id %}{% endif %}
+"><span>{{ product.price }}$</span><small>Купить</small><label> </label></a>
+                            </div>
+                        {% endfor %}
+						<div class="clearfix"> </div>
+					</div>
+					<!---//special-products-grids---->
+				</div>
+				<!----->
+
+				</div>
+			<!----content---->
+			<!----footer--->
+			<div class="footer">
+				<div class="container">
+					<div class="col-md-3 footer-logo">
+						<a href="index.html"><img src="web/images/flogo.png" title="brand-logo" /></a>
+					</div>
+					<div class="col-md-7 footer-links">
+						<ul class="unstyled-list list-inline">
+							<li><a href="#"> Faq</a> <span> </span></li>
+							<li><a href="#"> Terms and Conditions</a> <span> </span></li>
+							<li><a href="#"> Secure Payments</a> <span> </span></li>
+							<li><a href="#"> Shipping</a> <span> </span></li>
+							<li><a href="../../../static/web/contact.html"> Contact</a> </li>
+							<div class="clearfix"> </div>
+						</ul>
+					</div>
+					<div class="col-md-2 footer-social">
+						<ul class="unstyled-list list-inline">
+							<li><a class="pin" href="#"><span> </span></a></li>
+							<li><a class="twitter" href="#"><span> </span></a></li>
+							<li><a class="facebook" href="#"><span> </span></a></li>
+							<div class="clearfix"> </div>
+						</ul>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			 </div>
+			 <div class="clearfix"> </div>
+			<!---//footer--->
+			<!---copy-right--->
+					<div class="copy-right">
+						<div class="container">
+							<p>Template by <a href="http://w3layouts.com/">W3layouts</a></p>
+							<script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear'
+								 		};
+										*/
+
+										$().UItoTop({ easingType: 'easeOutQuart' });
+
+									});
+								</script>
+							<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+						</div>
+					</div>
+			<!--//copy-right--->
+		</div>
+		<!----container---->
+{% endblock %}
+
