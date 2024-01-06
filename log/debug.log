@@ -5075,3 +5075,22 @@ WARNING 2024-01-07 01:14:26,777 log 18980 18540 Not Found: /web/js/responsivesli
 WARNING 2024-01-07 01:14:26,778 basehttp 18980 18540 "GET /web/js/responsiveslides.min.js HTTP/1.1" 404 2648
 WARNING 2024-01-07 01:14:26,788 log 18980 18540 Not Found: /web/images/flogo.png
 WARNING 2024-01-07 01:14:26,788 basehttp 18980 18540 "GET /web/images/flogo.png HTTP/1.1" 404 2618
+INFO 2024-01-07 01:28:01,654 autoreload 18980 16588 F:\projects_1\store_for_elen\store_for_elen\settings.py changed, reloading.
+INFO 2024-01-07 01:28:02,194 autoreload 18616 17388 Watching for file changes with StatReloader
+INFO 2024-01-07 01:28:15,856 autoreload 18616 17388 F:\projects_1\store_for_elen\store_for_elen\settings.py changed, reloading.
+INFO 2024-01-07 01:28:16,335 autoreload 18376 15372 Watching for file changes with StatReloader
+INFO 2024-01-07 01:28:50,543 autoreload 18376 15372 F:\projects_1\store_for_elen\store_for_elen\settings.py changed, reloading.
+INFO 2024-01-07 01:28:51,164 autoreload 4316 18844 Watching for file changes with StatReloader
+INFO 2024-01-07 01:29:24,356 autoreload 4316 18844 F:\projects_1\store_for_elen\store_for_elen\settings.py changed, reloading.
+INFO 2024-01-07 01:29:24,804 autoreload 17572 5828 Watching for file changes with StatReloader
+INFO 2024-01-07 01:33:42,809 autoreload 17572 5828 F:\projects_1\store_for_elen\store_for_elen\settings.py changed, reloading.
+INFO 2024-01-07 01:33:43,351 autoreload 16364 13392 Watching for file changes with StatReloader
+INFO 2024-01-07 01:34:22,996 autoreload 16364 13392 F:\projects_1\store_for_elen\store_for_elen\settings.py changed, reloading.
+INFO 2024-01-07 01:34:23,366 autoreload 14188 16128 Watching for file changes with StatReloader
+INFO 2024-01-07 01:34:42,793 autoreload 14188 16128 F:\projects_1\store_for_elen\store_for_elen\settings.py changed, reloading.
+INFO 2024-01-07 01:34:43,492 autoreload 4316 19304 Watching for file changes with StatReloader
+INFO 2024-01-07 01:35:06,960 autoreload 4316 19304 F:\projects_1\store_for_elen\store_for_elen\settings.py changed, reloading.
+INFO 2024-01-07 01:35:07,360 autoreload 19184 19232 Watching for file changes with StatReloader
+INFO 2024-01-07 01:35:15,649 autoreload 19184 19232 F:\projects_1\store_for_elen\store_for_elen\settings.py changed, reloading.
+INFO 2024-01-07 01:35:16,043 autoreload 19240 19164 Watching for file changes with StatReloader
+INFO 2024-01-07 01:35:36,512 autoreload 19240 19164 F:\projects_1\store_for_elen\store_for_elen\settings.py changed, reloading.
